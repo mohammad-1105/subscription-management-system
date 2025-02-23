@@ -1,0 +1,33 @@
+{
+  "name": "subscription-management-system",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "prettier:check": "bun prettier . --check",
+    "prettier:write": "bun prettier . --write",
+    "lint:check": "bunx eslint .",
+    "lint:fix": "bunx eslint --fix ."
+  },
+  "author": {
+    "name": "Mohammad Aman",
+    "url": "https://github.com/mohammad-1105"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/bun": "latest",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "prettier": "3.5.2",
+    "typescript-eslint": "^8.24.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "5.0.1"
+  }
+}

@@ -1,4 +1,4 @@
-import { MONGODB_URI, NODE_ENV } from "../../config/env";
+import { MONGODB_URI, NODE_ENV } from "../config/env";
 import mongoose from "mongoose";
 
 if (!MONGODB_URI) {

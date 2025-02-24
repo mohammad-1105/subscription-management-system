@@ -1,4 +1,4 @@
-import { PORT } from "../config/env";
+import { PORT } from "./config/env";
 import app from "./app";
 import { connectToDatabase } from "./db";
 

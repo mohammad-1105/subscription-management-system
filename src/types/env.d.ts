@@ -7,5 +7,7 @@ declare namespace NodeJS {
     MONGODB_URI: string;
     JWT_SECRET: string;
     JWT_EXPIRES_IN: string;
+    ARCJET_ENV: string;
+    ARCJET_KEY: string;
   }
 }

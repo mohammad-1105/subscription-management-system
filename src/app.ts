@@ -2,7 +2,9 @@ import { ALLOWED_CORS_ORIGINS } from "./config/env";
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import requestIp from "request-ip";
 import { errorMiddleware } from "./middlewares/error.middleware";
+
 import path from "path";
 
 if (!ALLOWED_CORS_ORIGINS)
@@ -54,11 +56,17 @@ app.use(
   })
 );
 
+// Middleware for retrieving a request's IP address.
+app.use(requestIp.mw());
+// Apply the rate limiter to all requests
+app.use(limiter);
+
 // routes import
 import authRouter from "./routes/auth.routes";
 import userRouter from "./routes/user.routes";
 import healthcheckRouter from "./routes/healthcheck.routes";
 import subscriptionRouter from "./routes/subscription.routes";
+import { limiter } from "./middlewares/limiter.middleware";
 
 // app version 1
 app.use("/api/v1/healthcheck", healthcheckRouter);

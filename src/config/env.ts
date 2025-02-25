@@ -11,4 +11,6 @@ export const {
   ALLOWED_CORS_ORIGINS,
   JWT_SECRET,
   JWT_EXPIRES_IN,
+  ARCJET_ENV,
+  ARCJET_KEY,
 } = process.env;

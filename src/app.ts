@@ -66,7 +66,6 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/subscriptions", subscriptionRouter);
 
-
 // catch-all route handler
 app.use((_req, res) => {
   res.status(404).sendFile(path.join(__dirname, "../public/files/404.html"));
